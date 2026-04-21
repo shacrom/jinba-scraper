@@ -1,0 +1,48 @@
+{
+  "name": "jinba-scraper",
+  "version": "0.1.0",
+  "description": "Scraper worker for Jinba — Milanuncios + Wallapop, BullMQ, Supabase, privacy-first",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "node --env-file-if-exists=.env dist/index.js",
+    "dev": "tsx --env-file-if-exists=.env watch src/index.ts",
+    "build": "tsc",
+    "lint": "biome check .",
+    "format": "biome format --write .",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "types:sync": "tsx scripts/sync-db-types.ts",
+    "dlq:replay": "tsx scripts/dlq-replay.ts",
+    "dlq:list": "tsx scripts/dlq-replay.ts --list"
+  },
+  "dependencies": {
+    "@sentry/node": "^8.0.0",
+    "@supabase/supabase-js": "^2.50.0",
+    "bullmq": "^5.0.0",
+    "canvas": "^3.0.0",
+    "cheerio": "^1.0.0",
+    "face-api.js": "^0.22.2",
+    "ioredis": "^5.0.0",
+    "pino": "^9.0.0",
+    "playwright-core": "^1.50.0",
+    "sharp": "^0.33.0",
+    "undici": "^7.0.0",
+    "zod": "^3.22.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.0",
+    "@types/node": "^22.0.0",
+    "@vitest/coverage-v8": "^3.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.7.0",
+    "vitest": "^3.0.0"
+  },
+  "optionalDependencies": {
+    "@tensorflow/tfjs-node": "^4.22.0"
+  }
+}

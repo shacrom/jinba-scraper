@@ -1,0 +1,60 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`WallapopScraper.parse > matches snapshot 1`] = `
+[
+  {
+    "currency": "EUR",
+    "externalId": "w5a8b2c1d3e4",
+    "generationSlug": "na",
+    "km": 110000,
+    "locationLat": 39.4699,
+    "locationLng": -0.3763,
+    "locationText": "Valencia",
+    "makeSlug": "mazda",
+    "modelSlug": "mx-5",
+    "photos": [
+      {
+        "position": 0,
+        "sourceUrl": "https://cdn.wallapop.com/images/10420/123/abc.jpg?pictureSize=W320",
+      },
+    ],
+    "price": 9200,
+    "rawHtmlRef": null,
+    "sellerRaw": "wallapop:w5a8b2c1d3e4",
+    "sourceSlug": "wallapop",
+    "status": "active",
+    "trimSlug": "1-6",
+    "url": "[url]",
+    "year": 2000,
+  },
+  {
+    "currency": "EUR",
+    "externalId": "w9f7e6d5c4b3",
+    "generationSlug": "na",
+    "km": 140000,
+    "locationLat": 37.3886,
+    "locationLng": -5.9823,
+    "locationText": "Sevilla",
+    "makeSlug": "mazda",
+    "modelSlug": "mx-5",
+    "photos": [
+      {
+        "position": 0,
+        "sourceUrl": "https://cdn.wallapop.com/images/10420/456/def.jpg?pictureSize=W320",
+      },
+      {
+        "position": 1,
+        "sourceUrl": "https://cdn.wallapop.com/images/10420/456/ghi.jpg?pictureSize=W320",
+      },
+    ],
+    "price": 7800,
+    "rawHtmlRef": null,
+    "sellerRaw": "wallapop:w9f7e6d5c4b3",
+    "sourceSlug": "wallapop",
+    "status": "active",
+    "trimSlug": "1-6",
+    "url": "[url]",
+    "year": 1990,
+  },
+]
+`;

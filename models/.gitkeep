@@ -1,0 +1,9 @@
+# Face-api.js model weights go here.
+# Download from: https://github.com/justadudewhohacks/face-api.js/tree/master/weights
+#
+# Required files (tiny_face_detector):
+#   tiny_face_detector_model-shard1
+#   tiny_face_detector_model-weights_manifest.json
+#
+# These are ~190KB total and should be committed to the repo.
+# Docker COPY includes this directory.

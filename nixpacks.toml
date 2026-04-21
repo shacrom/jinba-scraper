@@ -1,0 +1,31 @@
+# Railway build configuration (nixpacks)
+# https://nixpacks.com/docs/configuration/file
+
+providers = ["node"]
+
+[phases.setup]
+nixPkgs = [
+  "nodejs_24",
+  "chromium",
+  "vips",
+  "cairo",
+  "pango",
+  "libjpeg",
+  "giflib",
+]
+
+[phases.install]
+cmds = [
+  "npm ci --ignore-scripts",
+  "npx playwright install chromium --with-deps=false",
+  "npm rebuild sharp",
+]
+
+[phases.build]
+cmds = [
+  "npm run types:sync || true",
+  "npm run build",
+]
+
+[start]
+cmd = "node dist/index.js"

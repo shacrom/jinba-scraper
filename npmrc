@@ -1,0 +1,6 @@
+# NOTE: this file is named 'npmrc' (without leading dot) for sandbox compatibility.
+# Rename to .npmrc for local use.
+#
+# Prevents Playwright from downloading browsers at npm install time.
+# Browsers are installed explicitly via `npx playwright install chromium`.
+PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1

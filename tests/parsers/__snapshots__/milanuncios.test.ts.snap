@@ -1,0 +1,60 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`MilanunciosScraper.parse > matches snapshot 1`] = `
+[
+  {
+    "currency": "EUR",
+    "externalId": "991234567",
+    "generationSlug": "na",
+    "km": 120000,
+    "locationLat": null,
+    "locationLng": null,
+    "locationText": "Madrid",
+    "makeSlug": "mazda",
+    "modelSlug": "mx-5",
+    "photos": [
+      {
+        "position": 0,
+        "sourceUrl": "https://cdn.milanuncios.com/foto/991234567/0.jpg",
+      },
+    ],
+    "price": 8500,
+    "rawHtmlRef": null,
+    "sellerRaw": "milanuncios:991234567",
+    "sourceSlug": "milanuncios",
+    "status": "active",
+    "trimSlug": "1-6",
+    "url": "[url]",
+    "year": 1990,
+  },
+  {
+    "currency": "EUR",
+    "externalId": "887654321",
+    "generationSlug": "na",
+    "km": 95000,
+    "locationLat": null,
+    "locationLng": null,
+    "locationText": "Barcelona",
+    "makeSlug": "mazda",
+    "modelSlug": "mx-5",
+    "photos": [
+      {
+        "position": 0,
+        "sourceUrl": "https://cdn.milanuncios.com/foto/887654321/0.jpg",
+      },
+      {
+        "position": 1,
+        "sourceUrl": "https://cdn.milanuncios.com/foto/887654321/1.jpg",
+      },
+    ],
+    "price": 11200,
+    "rawHtmlRef": null,
+    "sellerRaw": "milanuncios:887654321",
+    "sourceSlug": "milanuncios",
+    "status": "active",
+    "trimSlug": "1-6",
+    "url": "[url]",
+    "year": 1992,
+  },
+]
+`;
