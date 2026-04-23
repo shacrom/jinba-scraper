@@ -19,7 +19,7 @@
     "types:sync": "tsx scripts/sync-db-types.ts",
     "dlq:replay": "tsx scripts/dlq-replay.ts",
     "dlq:list": "tsx scripts/dlq-replay.ts --list",
-    "postinstall": "playwright install chromium chromium-headless-shell --with-deps=false || true"
+    "postinstall": "node ./node_modules/playwright-core/cli.js install chromium chromium-headless-shell || true"
   },
   "dependencies": {
     "@sentry/node": "^8.0.0",
