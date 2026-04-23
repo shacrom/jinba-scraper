@@ -62,8 +62,8 @@ COPY --from=build /app/dist ./dist
 COPY --from=build /app/package.json ./
 COPY --from=build /app/models ./models
 
-# Install only Chromium (saves ~400MB vs full Playwright bundle)
-RUN npx playwright install chromium
+# Install Chromium + headless shell (the latter is what launch({headless:true}) uses in v1.50+)
+RUN node ./node_modules/playwright-core/cli.js install chromium chromium-headless-shell
 
 USER node
 EXPOSE 3000
