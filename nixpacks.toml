@@ -17,7 +17,7 @@ nixPkgs = [
 [phases.install]
 cmds = [
   "npm ci --ignore-scripts",
-  "npx playwright install chromium --with-deps=false",
+  "npx playwright install chromium chromium-headless-shell --with-deps=false",
   "npm rebuild sharp",
 ]
 

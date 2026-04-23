@@ -25,11 +25,23 @@ export interface SourceConfig {
 }
 
 const MVP_MODEL_CORES = [
+  // Enthusiast set (F1 original).
   { make: 'mazda', model: 'mx-5', generation: 'na', trim: '1-6' },
   { make: 'datsun', model: '240z', generation: 's30', trim: 'l24' },
   { make: 'seat', model: 'leon', generation: 'mk1', trim: 'cupra-r' },
   { make: 'volkswagen', model: 'golf', generation: 'mk4', trim: 'r32' },
   { make: 'audi', model: 'a3', generation: '8p', trim: 's3' },
+  // Spain top-used-market set (added 2026-04).
+  { make: 'seat', model: 'ibiza', generation: 'mk4', trim: null },
+  { make: 'seat', model: 'leon', generation: 'mk2', trim: null },
+  { make: 'volkswagen', model: 'polo', generation: 'mk5', trim: null },
+  { make: 'renault', model: 'megane', generation: 'mk3', trim: null },
+  { make: 'renault', model: 'clio', generation: 'mk4', trim: null },
+  { make: 'ford', model: 'focus', generation: 'mk2', trim: null },
+  { make: 'opel', model: 'astra', generation: 'j', trim: null },
+  { make: 'peugeot', model: '308', generation: 'mk1', trim: null },
+  { make: 'bmw', model: 'serie-3', generation: 'e90', trim: null },
+  { make: 'dacia', model: 'sandero', generation: 'mk2', trim: null },
 ] as const;
 
 function milanunciosModels(): ModelQuery[] {
