@@ -18,7 +18,8 @@
     "typecheck": "tsc --noEmit",
     "types:sync": "tsx scripts/sync-db-types.ts",
     "dlq:replay": "tsx scripts/dlq-replay.ts",
-    "dlq:list": "tsx scripts/dlq-replay.ts --list"
+    "dlq:list": "tsx scripts/dlq-replay.ts --list",
+    "postinstall": "playwright install chromium chromium-headless-shell --with-deps=false || true"
   },
   "dependencies": {
     "@sentry/node": "^8.0.0",
