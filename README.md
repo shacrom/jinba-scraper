@@ -1,5 +1,31 @@
 # jinba-scraper
 
+> ## Status: archived (reference only) — as of 2026-04-23
+>
+> Jinba price data is now ingested via a paid scraping provider (Apify) through the `/api/cron/sync-prices` endpoint in [`jinba-web`](https://github.com/shacrom/jinba-web). Apify's pre-built Milanuncios and Wallapop actors handle proxy rotation, anti-bot evasion, and legal indemnification — removing the self-hosted scraper's ongoing maintenance cost.
+>
+> **This repository is retained for reference only.** The Railway deployment is scheduled for shutdown after Apify's first successful ingest run lands in production.
+>
+> Rationale — engram `sdd/data-sources-strategy` (project: `jinba-web`):
+> - Self-hosted scraper blocked on Milanuncios 403 (CloudFront) + Wallapop `__NEXT_DATA__` parser breakage for weeks.
+> - Side-project budget ($100/mo cap) covers Apify's Starter tier with headroom.
+> - Single-repo ingest (Vercel cron in jinba-web) reduces infra surface.
+>
+> For the replacement pipeline, see:
+> - `jinba-web/src/pages/api/cron/sync-prices.ts` — ingest orchestrator
+> - `jinba-web/src/lib/ingest/*` — Apify client + normalize + upsert modules
+> - `jinba-db/supabase/migrations/20260429000000_ingested_price_points.sql` — staging table + MV extension
+>
+> Contact: marmibas.dev@gmail.com
+
+---
+
+## Historical documentation
+
+The material below describes the scraper as it existed before deprecation. It is preserved so the architecture and policy choices remain discoverable; none of it reflects current operational practice.
+
+---
+
 Worker Node.js/TypeScript que extrae anuncios de Milanuncios y Wallapop, normaliza al schema canónico de [jinba-db](https://github.com/shacrom/jinba-db), procesa imágenes (blur de caras y matrículas) y persiste en Supabase.
 
 ---
